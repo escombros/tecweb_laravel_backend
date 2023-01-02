@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PdfController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -23,3 +24,6 @@ Route::get('prueba', function () {
 });
 
 Route::post('/pdf', [PdfController::class, 'store']);
+
+Route::get('/download/{folio}', [PdfController::class, 'download']);
+
